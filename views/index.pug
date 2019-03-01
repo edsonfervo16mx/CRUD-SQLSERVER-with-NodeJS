@@ -1,0 +1,40 @@
+extends ./layout.pug
+block container
+    div(class="columns" style="margin-top:50px")
+        div(class="column is-3")
+            nav()
+                ul()
+                    li()
+                        a(href="/").
+                            Home
+                        a
+                    li()
+                        a(href="/appweb").
+                            Registrar
+                        a
+        div(class="column is-9")
+            table(class="table")
+                thead
+                    tr
+                        th.
+                            ID
+                        th.
+                            Nombre
+                        th.
+                            Descripcion
+                        th.
+                            Detalles
+                        th.
+                            Opciones
+                tbody
+                    for datosconsulta in datos
+                        tr
+                            td #{datosconsulta.CategoriaID}
+                            td #{datosconsulta.NombreCategoria}
+                            td #{datosconsulta.DescripcionCategoria}
+                            td #{datosconsulta.DetallesCategoria}
+                            td
+                                a(href="appweb/edit/"+datosconsulta.CategoriaID+"").
+                                    Editar
+        
+                            

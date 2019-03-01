@@ -1,0 +1,35 @@
+extends ../layout.pug
+block container
+    div(class="columns" style="margin-top:50px")
+        div(class="column is-3")
+            nav()
+                ul()
+                    li()
+                        a(href="/").
+                            Home
+                        a
+                    li()
+                        a(href="/appweb").
+                            Registrar
+                        a
+        div(class="column is-9")
+            div(class="box")
+                h1(class="is-size-1").
+                    CRUD - SQL SERVER - Editar #{test}
+                form(action="" method="POST")
+                    div(class="field")
+                        div(class="control")
+                            input(type="text" id="id_categoria" name="id_categoria" placeholder="Ingresar id" class="input is-info" value=""+datos[0].CategoriaID+"")
+                    div(class="field")
+                        div(class="control")
+                            input(type="text" id="nombre_categoria" name="nombre_categoria" placeholder="Ingresar nombre" class="input is-info" value=""+datos[0].NombreCategoria+"")
+                    div(class="field")
+                        div(class="control")
+                            input(type="text" id="descripcion_categoria" name="descripcion_categoria" placeholder="Ingresar descripcion" class="input is-info" value=""+datos[0].DescripcionCategoria+"")
+                    div(class="field")
+                        div(class="control")
+                            input(type="text" id="detalles_categoria" name="detalles_categoria" placeholder="Ingresar detalles" class="input is-info" value=""+datos[0].DetallesCategoria+"")
+                    div(class="field is-grouped")
+                        div(class="control")
+                            button(class="button is-link").
+                                Submit
